@@ -1,22 +1,27 @@
 package Tarea_6;
 
+import Tarea_6.HerenciaMultiple.AlumnoDeportistaArtista;
+
 public class Main {
     public static void main(String[] args) {
-        Camion camion =new Camion("Diesel", 3);
-        System.out.println(camion);
+        Cuadrado cuadro = new Cuadrado();
+        cuadro.setLado(5);
+        System.out.println("El area del cuadrado es : "+cuadro.calcularArea());
 
-        System.out.println(camion.encender());
-        camion.avanzar();
-        camion.frenar();
-        System.out.println(camion.apagar());
-        System.out.println("-------motocicleta------");
-        Motocicleta moto = new Motocicleta(150,"Yamaha");
-        System.out.println(moto);
-        moto.encender();
-        moto.avanzar();
-        moto.hacerCaballito();
-        moto.frenar();
-        moto.apagar();
+        Circulo circulo = new Circulo();
+        circulo.setRadio(2.4);
+        System.out.println("El area del circulo es : "+circulo.calcularArea());
+
+        AlumnoDeportistaArtista ada = new AlumnoDeportistaArtista();
+        ada.setNombre("Pepe");
+        ada.setArte("pintura");
+        ada.setDeporte("Basket ball");
+        System.out.println(ada);
+        ada.ensayar(" oleo");
+        ada.entrenar();
+        ada.presentarCompetencia("CDMX");
+        System.out.println(ada);
+
 
     }
 }
